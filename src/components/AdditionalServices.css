@@ -1,0 +1,227 @@
+﻿/* =============================================
+   ADDITIONAL SERVICES — Framer Horizontal Reveal
+   ============================================= */
+
+.add-services-section {
+  background: #f9f9f9;
+  padding: 40px 0 140px;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.add-services-grid-top {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-bottom: 14px;
+  width: 100%;
+}
+
+.add-services-grid-bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  width: 100%;
+}
+
+.add-service-card {
+  background: #f2f2f2;
+  border-radius: 20px;
+  padding: 40px 32px 36px;
+  cursor: default;
+  position: relative;
+  
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.04),
+    0 2px 4px rgba(0, 0, 0, 0.03),
+    0 4px 12px rgba(0, 0, 0, 0.02);
+    
+  transition: background 0.4s ease, box-shadow 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.add-service-card:hover {
+  background: #ffffff;
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.05),
+    0 8px 16px rgba(0, 0, 0, 0.04),
+    0 24px 48px rgba(0, 0, 0, 0.06);
+  transform: translateY(-4px);
+}
+
+.add-service-card--large {
+  min-height: 320px;
+}
+
+.add-service-card--small {
+  min-height: 320px;
+  padding: 36px 28px 30px;
+}
+
+.add-card-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.add-card-header {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.add-card-num {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #aaaaaa;
+  letter-spacing: 0.05em;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  display: inline-block;
+  transition: all 0.4s ease;
+}
+
+.add-service-card:hover .add-card-num {
+  color: var(--brand-neon);
+  border-color: var(--brand-neon);
+}
+
+/* Updated 3D Image Handling Containers */
+.add-card-visual {
+  height: 130px;
+  width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  top: 30px;
+  right: 25px;
+  pointer-events: none;
+}
+
+.add-card-visual--small {
+  height: 100px;
+  width: 110px;
+  top: 25px;
+  right: 20px;
+}
+
+/* Image styles properly mapped for AI-generated white-background PNGs */
+.add-card-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  /* 
+    Blend mode multiply strips away the white background perfectly 
+    so the 3D objects float cleanly over the gray card background.
+  */
+  mix-blend-mode: multiply;
+  filter: brightness(1.05) contrast(1.08); /* Makes off-white turn to pure white */
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+}
+
+/* Floating Hover Animation (matches Section 1 perfectly) */
+.add-service-card:hover .add-card-img {
+  transform: scale(1.15) translateY(-5px) rotate(2deg);
+  filter: brightness(1.1) contrast(1.1) drop-shadow(0px 10px 15px rgba(212, 255, 0, 0.2));
+}
+
+.add-card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  margin-top: 40px; /* Make space for images above text */
+}
+
+.add-card-title {
+  font-family: var(--font-heading, 'Noto Sans Georgian', sans-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #141414;
+  letter-spacing: -0.025em;
+  line-height: 1.3;
+  margin-bottom: 12px;
+  max-width: 70%;
+}
+
+.add-service-card--large .add-card-title {
+  font-size: 1.35rem;
+  margin-bottom: 16px;
+  max-width: 60%;
+}
+
+.add-card-text {
+  font-family: var(--font-body, 'Noto Sans Georgian', sans-serif);
+  font-size: 0.9rem;
+  color: #747474;
+  line-height: 1.6;
+  font-weight: 400;
+  letter-spacing: -0.005em;
+  max-width: 85%;
+  transition: color 0.4s ease;
+}
+
+.add-service-card--large .add-card-text {
+  max-width: 70%;
+}
+
+.add-card-details-wrapper {
+  margin-top: auto;
+  overflow: hidden;
+}
+
+.add-card-details {
+  font-family: var(--font-body, 'Noto Sans Georgian', sans-serif);
+  font-size: 0.8rem;
+  color: #555555;
+  line-height: 1.5;
+  font-weight: 500;
+  padding-top: 20px;
+  margin: 0;
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.add-detail-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--brand-neon);
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.add-service-card:hover .add-card-details {
+  max-height: 100px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 960px) {
+  .add-services-grid-top {
+    grid-template-columns: 1fr;
+  }
+  .add-services-grid-bottom {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .add-services-grid-bottom {
+    grid-template-columns: 1fr;
+  }
+  .add-card-visual {
+     display: none;
+  }
+  .add-card-title, .add-card-text {
+    max-width: 100%;
+  }
+}

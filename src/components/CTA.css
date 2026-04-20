@@ -1,0 +1,130 @@
+/* ============================
+   CTA SECTION — Premium Dark
+   ============================ */
+
+.cta-section {
+  background: #0a0a0a;
+  width: 100%;
+  padding: 140px 0 160px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 56px;
+  display: flex;
+  justify-content: center;
+}
+
+.cta-inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 720px;
+  z-index: 2;
+}
+
+/* Eyebrow */
+.cta-eyebrow {
+  display: inline-block;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: #555;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+/* Headline */
+.cta-title {
+  font-family: var(--font-heading, 'Noto Sans Georgian', sans-serif);
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  margin-bottom: 24px;
+}
+
+/* Sub */
+.cta-sub {
+  font-family: var(--font-body, 'Noto Sans Georgian', sans-serif);
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.65;
+  margin-bottom: 48px;
+  letter-spacing: -0.01em;
+}
+
+/* CTA Button — same split design as Hero */
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 6px;
+  background: #fff;
+  gap: 0;
+  cursor: pointer;
+  border: none;
+}
+
+.cta-btn span {
+  font-family: var(--font-body, 'Noto Sans Georgian', sans-serif);
+  font-size: 14.5px;
+  font-weight: 500;
+  color: #111;
+  padding: 0 28px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.cta-btn-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #9cfc00;
+  color: #111;
+  border-radius: 4px;
+  flex-shrink: 0;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.cta-btn:hover .cta-btn-arrow {
+  background: #8ae800;
+}
+
+/* Ambient Glow */
+.cta-glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(ellipse at center, rgba(156, 252, 0, 0.08) 0%, transparent 65%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+  .cta-section {
+    padding: 100px 0 120px;
+  }
+  .cta-container {
+    padding: 0 24px;
+  }
+  .cta-title {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+}

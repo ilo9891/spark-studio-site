@@ -1,0 +1,104 @@
+.scroll-sequence-section {
+  position: relative;
+  height: 350vh; 
+  background-color: #ffffff;
+}
+
+.sticky-container {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 0 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.main-center-text {
+  font-size: clamp(3rem, 5vw, 5rem);
+  font-weight: 700;
+  color: #111;
+  text-align: center;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  z-index: 10;
+  padding: 0 2rem;
+}
+
+/* Floating Popup Badges - ENLARGED */
+.timeline-badge {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 16px; /* Increased gap */
+  background-color: #f7f7f7; 
+  border: 1px solid rgba(0,0,0,0.04);
+  padding: 1.25rem 2rem; /* Noticeably larger padding */
+  border-radius: 6px; /* Slightly softer corners for larger card */
+  box-shadow: 0 12px 50px rgba(0,0,0,0.04);
+  z-index: 20;
+  will-change: transform, opacity;
+  white-space: nowrap; 
+}
+
+.warning-icon-bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-text-content {
+  font-size: 1.1rem; /* Bumping typography size */
+  font-weight: 500;
+  color: #333;
+  line-height: 1.25;
+}
+
+/* Safe Coordinates to strictly avoid overlapping the center text */
+.badge-pos-1 {
+  top: 15%;
+  left: 8%;
+}
+
+.badge-pos-2 {
+  top: 25%;
+  right: 5%;
+}
+
+.badge-pos-3 {
+  bottom: 25%;
+  left: 10%;
+}
+
+.badge-pos-4 {
+  bottom: 12%;
+  right: 18%;
+}
+
+@media (max-width: 1024px) {
+  .timeline-badge {
+    position: relative;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    margin-bottom: 1rem;
+    width: 90%;
+    max-width: 400px;
+    white-space: normal;
+  }
+  
+  .sticky-container {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  
+  .main-center-text {
+    order: -1;
+    margin-bottom: 2rem;
+  }
+}

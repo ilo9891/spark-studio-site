@@ -1,0 +1,221 @@
+﻿/* =============================================
+   SERVICES — Premium Framer-Quality Refinement
+   ============================================= */
+
+.services-section {
+  background: #f9f9f9;
+  padding: 120px 0 140px;
+  width: 100%;
+}
+
+.services-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 56px;
+}
+
+/* ---- Section Header ---- */
+.services-header {
+  margin-bottom: 48px;
+}
+
+.services-header-inner {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 64px;
+}
+
+.services-header-left {
+  flex: 0 0 auto;
+}
+
+.services-eyebrow {
+  display: inline-block;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: #aaa;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.services-title {
+  font-family: var(--font-heading, 'Noto Sans Georgian', sans-serif);
+  font-size: clamp(2.2rem, 3.5vw, 3rem);
+  font-weight: 800;
+  color: #0f0f0f;
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+}
+
+.services-header-desc {
+  flex: 0 1 420px;
+  font-family: var(--font-body, 'Noto Sans Georgian', sans-serif);
+  font-size: 0.95rem;
+  color: #888;
+  line-height: 1.72;
+  font-weight: 400;
+  letter-spacing: -0.005em;
+}
+
+/* ---- Grids ---- */
+.services-grid-top {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.services-grid-bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+/* ---- Card Base ---- */
+.service-card {
+  background: #f2f2f2;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: default;
+  position: relative;
+
+  /* Layered shadow system */
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.04),
+    0 2px 4px rgba(0, 0, 0, 0.03),
+    0 6px 16px rgba(0, 0, 0, 0.04);
+
+  transition:
+    background 0.4s ease,
+    box-shadow 0.4s ease;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hover — subtle depth shift */
+.service-card:hover {
+  background: #ececec;
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.05),
+    0 4px 8px rgba(0, 0, 0, 0.04),
+    0 16px 40px rgba(0, 0, 0, 0.07);
+}
+
+/* ---- Card Sizes ---- */
+.service-card--large {
+  min-height: 380px;
+}
+
+.service-card--small {
+  min-height: 320px;
+}
+
+/* ---- Illustration ---- */
+.card-illustration {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 24px 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-img {
+  width: 100%;
+  max-width: 180px; 
+  height: auto;
+  object-fit: contain;
+  /* mix-blend-mode: multiply makes white transparent on the grey card background */
+  mix-blend-mode: multiply; 
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  /* 
+     Applying brightness and contrast to push any off-white pixels to pure white,
+     which makes them perfectly transparent under multiply blend mode.
+  */
+  filter: brightness(1.08) contrast(1.05); 
+  pointer-events: none;
+}
+
+.service-card--large .service-img {
+  max-width: 260px; 
+}
+
+.service-card:hover .service-img {
+  transform: scale(1.08) translateY(-4px); 
+}
+
+/* ---- Card Body Text ---- */
+.card-body {
+  padding: 0 32px 36px;
+}
+
+.service-card--small .card-body {
+  padding: 0 28px 30px;
+}
+
+.card-title {
+  font-family: var(--font-heading, 'Noto Sans Georgian', sans-serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #141414;
+  letter-spacing: -0.025em;
+  line-height: 1.28;
+  margin-bottom: 10px;
+}
+
+.service-card--large .card-title {
+  font-size: 1.2rem;
+}
+
+.card-text {
+  font-family: var(--font-body, 'Noto Sans Georgian', sans-serif);
+  font-size: 0.875rem;
+  color: #747474;
+  line-height: 1.68;
+  font-weight: 400;
+  letter-spacing: -0.005em;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 960px) {
+  .services-container {
+    padding: 0 32px;
+  }
+
+  .services-grid-top {
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid-bottom {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .services-header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .services-header-desc {
+    flex: unset;
+  }
+}
+
+@media (max-width: 560px) {
+  .services-section {
+    padding: 80px 0 100px;
+  }
+
+  .services-container {
+    padding: 0 20px;
+  }
+
+  .services-grid-bottom {
+    grid-template-columns: 1fr;
+  }
+}

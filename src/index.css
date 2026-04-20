@@ -1,0 +1,159 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap');
+
+:root {
+  /* LIGHT THEME VARIABLES */
+  --bg-dark: #FFFFFF; 
+  --bg-card: #F9F9F9;
+  --bg-card-hover: #F0F0F0;
+  --border-color: #E5E5E5;
+  
+  --text-main: #0A0A0A;
+  --text-muted: #666666;
+  
+  --brand-neon: #98fe00; 
+  
+  /* Use Noto Sans Georgian as priority fallback */
+  --font-main: 'Noto Sans Georgian', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Roboto Mono', monospace;
+  
+  --nav-height: 80px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: var(--font-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.text-neon {
+  color: var(--brand-neon); 
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.85rem;
+}
+
+.cut-corner {
+  clip-path: polygon(
+    0 0, 
+    calc(100% - 20px) 0, 
+    100% 20px, 
+    100% 100%, 
+    20px 100%, 
+    0 calc(100% - 20px)
+  );
+}
+
+.cut-corner-br {
+  clip-path: polygon(
+    0 0, 
+    100% 0, 
+    100% calc(100% - 30px), 
+    calc(100% - 30px) 100%, 
+    0 100%
+  );
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--text-main); 
+  color: #fff;
+  font-weight: 600;
+  padding: 0.85rem 1.75rem;
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--brand-neon);
+  color: #000;
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  color: var(--text-main);
+  font-weight: 500;
+  padding: 0.85rem 1.75rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid var(--border-color);
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+}
+
+.btn-ghost:hover {
+  border-color: var(--text-main);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--brand-neon);
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 8px var(--brand-neon);
+}
+
+::selection {
+  background: var(--brand-neon);
+  color: #000;
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px; /* Widened to match exact template stretch */
+  margin: 0 auto;
+  padding: 0 4rem; /* Adjusted for wider feel */
+}
+
+.section {
+  padding: 8rem 0;
+  position: relative;
+}
+
+@keyframes slowRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.star-icon, .spark-star-footer {
+  display: inline-block;
+  animation: slowRotate 6s linear infinite;
+  transform-origin: center;
+}

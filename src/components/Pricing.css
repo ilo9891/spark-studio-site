@@ -1,0 +1,223 @@
+﻿/* ... (rest of CSS remains similar, adding specific utility for small price) */
+.pricing-section {
+  padding: 100px 0 140px;
+  background-color: #ffffff;
+}
+
+.pricing-header {
+  margin-bottom: 80px;
+}
+
+.pricing-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: #888;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+}
+
+.pricing-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.pricing-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 700;
+  color: #111;
+  letter-spacing: -0.02em;
+}
+
+.pricing-toggle-wrapper {
+  background-color: #f7f7f7;
+  padding: 6px;
+  border-radius: 12px;
+}
+
+.pricing-toggle {
+  display: flex;
+  gap: 4px;
+}
+
+.toggle-btn {
+  padding: 10px 24px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: transparent;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.toggle-btn.active {
+  background-color: var(--brand-neon);
+  color: #000;
+}
+
+.save-badge {
+  font-size: 0.65rem;
+  background-color: #000;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.plan-card {
+  background-color: #f7f7f7;
+  border-radius: 24px;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  border: 1px solid #eee;
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%);
+}
+
+.plan-highlight {
+  background-color: #111;
+  color: #fff;
+  border: none;
+  box-shadow: 0 40px 80px -20px rgba(0,0,0,0.2);
+}
+
+.plan-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.plan-desc {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+.plan-highlight .plan-desc {
+  color: #aaa;
+}
+
+.plan-price-box {
+  margin-bottom: 40px;
+  min-height: 80px;
+  display: flex;
+  align-items: baseline;
+}
+
+.price-value {
+  font-size: 2.8rem;
+  font-weight: 800;
+  font-family: var(--font-heading);
+}
+
+.price-value--small {
+  font-size: 1.8rem; /* Scaled down Enterprise text */
+  margin-top: 10px;
+}
+
+.price-currency {
+  font-size: 0.9rem;
+  color: #888;
+  margin-left: 8px;
+  font-weight: 500;
+}
+
+.plan-divider {
+  height: 1px;
+  background-color: rgba(0,0,0,0.06);
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.plan-highlight .plan-divider {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-grow: 1;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.feature-icon {
+  color: #bbb;
+}
+
+.plan-highlight .feature-icon {
+  color: var(--brand-neon);
+}
+
+.plan-btn {
+  width: 100%;
+  padding: 4px;
+  background-color: #111;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 24px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: 56px;
+}
+
+.plan-highlight .plan-btn {
+  background-color: var(--brand-neon);
+  color: #000;
+}
+
+.btn-icon {
+  width: 48px;
+  height: 48px;
+  background-color: var(--brand-neon);
+  color: #000;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plan-highlight .btn-icon {
+  border: 1px solid rgba(0,0,0,0.1);
+  background-color: rgba(0,0,0,0.05);
+}
+
+@media (max-width: 1024px) {
+  .plans-grid {
+    grid-template-columns: 1fr;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+}
