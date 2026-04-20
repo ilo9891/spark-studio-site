@@ -110,3 +110,12 @@
     gap: 40px;
   }
 }
+
+@media (max-width: 640px) {
+  .faq-question-btn {
+    padding: 20px;
+  }
+  .faq-answer-inner {
+    padding: 0 20px 24px;
+  }
+}

@@ -157,3 +157,22 @@ ul {
   animation: slowRotate 6s linear infinite;
   transform-origin: center;
 }
+
+/* === PREMIUM MOBILE RESPONSIVENESS === */
+@media (max-width: 960px) {
+  .container {
+    padding: 0 2rem;
+  }
+  .section {
+    padding: 6rem 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+  .section {
+    padding: 4rem 0;
+  }
+}

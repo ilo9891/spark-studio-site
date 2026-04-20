@@ -221,3 +221,14 @@
     margin: 0 auto;
   }
 }
+
+@media (max-width: 640px) {
+  .plan-card {
+    padding: 35px 24px;
+    border-radius: 20px;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 25px), calc(100% - 25px) 100%, 0 100%);
+  }
+  .pricing-header {
+    margin-bottom: 40px;
+  }
+}

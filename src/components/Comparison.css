@@ -115,3 +115,13 @@
     padding: 40px 30px;
   }
 }
+
+@media (max-width: 960px) {
+  .comparison-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .comparison-card {
+    min-height: auto;
+  }
+}
