@@ -176,3 +176,80 @@ ul {
     padding: 4rem 0;
   }
 }
+
+/* FINAL GLOBAL MOBILE STABILITY FIX */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 1rem; /* Slightly tighter for small screens to prevent overflow */
+  }
+}
+
+/* AGGRESSIVE MOBILE LOCKDOWN */
+* {
+  max-width: 100%;
+  box-sizing: border-box !important;
+}
+
+html, body {
+  width: 100% !important;
+  min-width: 100% !important;
+  overflow-x: hidden !important;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+}
+
+img, video, svg, canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Fix for potential Framer Motion overflow during spring calculations */
+#root {
+  overflow-x: hidden !important;
+  width: 100% !important;
+}
+
+/* ULTIMATE MOBILE STABILIZATION */
+:root {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+body {
+  overflow-x: hidden !important;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.app-wrapper {
+  overflow-x: hidden !important;
+  width: 100% !important;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  width: 100%;
+  overflow-x: hidden !important;
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 3rem 0;
+  }
+  .container {
+    padding: 0 1rem !important;
+  }
+  h1, h2, h3 {
+    text-align: center !important;
+    word-break: break-word;
+  }
+}

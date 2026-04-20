@@ -46,7 +46,7 @@ const SERVICES = [
 ];
 
 const containerVariants = {
-  hidden: { x: 100, opacity: 0 },
+  hidden: { x: 20, opacity: 0 },
   visible: {
     x: 0,
     opacity: 1,
@@ -60,7 +60,7 @@ const containerVariants = {
 };
 
 const cardVariants = {
-  hidden: { x: 40, opacity: 0 },
+  hidden: { x: 15, opacity: 0 },
   visible: {
     x: 0,
     opacity: 1,

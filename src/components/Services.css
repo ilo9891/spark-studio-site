@@ -75,7 +75,7 @@
 }
 
 /* ---- Card Base ---- */
-.service-card {
+.service-card { width: 100%; max-width: 100%; box-sizing: border-box;
   background: #f2f2f2;
   border-radius: 20px;
   overflow: hidden;
@@ -225,7 +225,7 @@
     grid-template-columns: 1fr;
     gap: 20px;
   }
-  .service-card {
+  .service-card { width: 100%; max-width: 100%; box-sizing: border-box;
     height: auto;
     min-height: 250px;
   }

@@ -1,4 +1,4 @@
-.marquee-container {
+﻿.marquee-container {
   width: 100%;
   overflow: hidden;
   background-color: var(--text-main); /* Black background for contrast */
@@ -36,4 +36,14 @@
 
 .marquee-item svg {
   color: var(--brand-neon) !important;
+}
+
+@media (max-width: 640px) {
+  .marquee-container {
+    transform: rotate(-1deg) scale(1);
+    margin: 1rem 0;
+  }
+  .marquee-text {
+    font-size: 1rem;
+  }
 }

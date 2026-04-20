@@ -280,3 +280,21 @@
     flex-direction: column;
   }
 }
+
+@media (max-width: 1024px) {
+  .hero-actions-area {
+    align-items: center;
+    text-align: center;
+    padding-top: 1rem;
+  }
+  .hero-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .action-row {
+    align-items: center;
+  }
+  .input-btn-group {
+    max-width: 100%;
+  }
+}

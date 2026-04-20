@@ -52,7 +52,7 @@ const Pricing = () => {
   ];
 
   const cardVariants = {
-    hidden: { opacity: 0, x: 50 },
+    hidden: { opacity: 0, x: 20 },
     visible: (i) => ({
       opacity: 1,
       x: 0,

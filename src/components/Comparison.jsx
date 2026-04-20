@@ -41,7 +41,7 @@ const Comparison = () => {
           {/* LEFT CARD: Spark Studio */}
           <motion.div 
             className="comp-card comp-card-spark"
-            initial={{ opacity: 0, x: -60 }}
+            initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.9, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
@@ -61,7 +61,7 @@ const Comparison = () => {
           {/* RIGHT CARD: Other Agencies */}
           <motion.div 
             className="comp-card comp-card-others"
-            initial={{ opacity: 0, x: 60 }}
+            initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.9, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
